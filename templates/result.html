@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <title>Result</title>
+
+  <style>
+      body {
+    background-image:url("static/e.png");
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position:left bottom;
+    background-size:300px 300px ;
+    font-family:Sans-serif;
+
+   }
+
+</style>
+
+
+
+
+</head>
+<body>
+
+  <header style= "margin: auto;width: 80%; text-align: center; margin-top: 20px; font-size:70px;">MALARIA CELL CLASSIFICATION</header>
+<div style="width:1200px; margin: auto; text-align: center">
+    <img src="{{ url_for('send_file', filename=image_file_name)}}" style ="max-width:1200px; max-height: 1200px; margin-top: 30px; margin-bottom: 10px">
+    <p style="font-size:20px; color:red; font-weight:bold;">{{ image_file_name }}</p>
+
+    <p style="margin-top: 40px ; font-size:50px;"><b>Predicted Label: <span style="color: red">{{ label }}</span></b></p>
+    <p style="font-size:50px; "><b>Accuracy : <span style="color: red; font-size:50px;">{{ accuracy }} %</span></b></p>
+     <a href="/"><input type="submit"  value="Back to Home"></a>
+</div>
+<br>
+  <br>
+  <br>
+<div>
+     <footer id="main-footer" style="text-align: center; font-size:20px;">
+      *** for any feedback connect me - puran.sinha@gmail.com ****
+    </footer>
+       </div>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+
+  <title>Malaria Cell Classification</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+ <script>
+    function showloading() {
+        image = document.getElementById('loading_image');
+        image.style.display = 'inline'
+    }
+</script>
+
+    <style>
+
+
+
+     body {
+    background-color:#9DEBF7;
+    background-repeat: no-repeat;
+    background-attachment:
+    fixed;
+    background-position: center;
+    background-size:cover ;
+    font-family:Sans-serif;
+
+   }
+       .btn-file {
+    position: relative;
+    overflow: hidden;
+    }
+
+
+     .img_holder img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+
+
+     .row{
+       display:flex;
+
+     }
+
+     .col{
+      flex:40% 60%;
+
+     }
+
+   </style>
+
+</head>
+
+
+<body>
+<header style="margin: auto;width: 100%; text-align:center; margin-top: 50px; font-size:60px;">MALARIA DETECTION<br><br>
+    Information taken with reference of https://www.who.int/news-room/fact-sheets/detail/malaria</header>
+<body style="background-color:teal;">
+             <br>
+                 <div class="row" >
+                     <div class="col" >
+             <div style=" margin-top: 10px ; margin-right: 30px;">
+             <img style="max-width:2500px; height=auto; margin-left:30px;" src="{{ url_for('static', filename='text.jpeg') }}"/>
+               </div>
+
+                <form action="/upload" method="post" enctype="multipart/form-data" style="margin-top: 30px; width: 80%;  margin: auto;" onsubmit="showloading()">
+                     <br> <br>
+                     <span class="btn btn-default btn-file">
+                 Select Image <input type="file" name="image">
+               </span><br><br>
+                    <input type="submit" value="Press to Validate" class="btn btn-primary">
+                  </form>
+
+           </div>
+
+
+           <div class="col">
+
+               <p align="left" style="margin-right:30px; font-size:17px; "> <span style="font-size:50px;">M</span>alaria is a life-threatening disease caused by parasites that are transmitted to people through the bites of infected female Anopheles mosquitoes. It is preventable and curable. According to WHO there are
+                   212 Million malaria cases and 435000 deaths. Early diagnostics and treatment of malaria can prevent deaths. Malaria is prevalent across the world especially in tropical regions the severity of malaria varies based on the species of plasmodium. Symptoms are chills, fever and sweating,
+                   usually occurring a few weeks after being bitten.
+
+                   If efficient detection of malaria is made then deaths can be avoided which will ave families and communities from downward spiral of poverty. Most of the 435000 who died of Malaria were children, mainly in Africa, which is hyperendemic for malaria.When severe malaria does occur, malnourished children have a higher morbidity and mortality.when severe malaria does occur, malnourished children have a higher morbidity and mortality.when severe malaria does occur, malnourished children have a higher morbidity and mortality. Malaria causes Renal failure,Pulmonary oedema,Jaundice,Anemia,Pre-treatment hypoglycemia and  Convulsions.
+
+                   <br> <br>
+               <span style="color:#F50B0B;"><b>Artificial intelligence (AI)</b></span> has the potential to help tackle some of the world’s most challenging problems and when coupled with popular tools and technologies for development and betterment of our society, what the point of technology when it can't help the needy and save lives. Deep learning helps us to build robust, scalable and effective solutions which can be adopted by everyone even in remote corners of the world and detection of Malaria is one of the problems which Deep learning has help to tackle.
+                 <br> <br>
+               <b>It is a transfer learning based automatic classification system that is applied for
+                the Classification of Malaria Infected Cells is presented. In order to achieve fully
+automated diagnosis without any manual feature extraction, I chose deep convolutional
+                   neural network (CNN) as the classifier. </b>
+               </p>
+           </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+       <div>
+     <footer id="main-footer" style="text-align: center; font-size:20px; color:red;">
+      *** Hope You Liked this *****
+    </footer>
+       </div>
+
+
+
+
+</body>
+</html>
